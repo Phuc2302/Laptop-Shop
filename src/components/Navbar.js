@@ -17,29 +17,27 @@ export const Navbar = () => {
                     <div className="navbar-collapse collapse">
                         <ul className="nav navbar-nav">
                             <li className="active"> 
-                            <Link to='/'>Home</Link>
+                            {/* <Link to='/'>Home</Link> */}
+                            <a href="index.html">Home</a>
                             </li>
                             <li>
-                            <Link to='./shopPage'>Shop page</Link>
-                                {/* <a href="shop.html">Shop page</a> */}
+                            {/* <Link to='./shopPage'>Shop page</Link> */}
+                                <a href="shop.html">Shop page</a>
                             </li>
                             <li>
-                            <Link to='./singleProduct'>Single product</Link>    
-                                {/* <a href="single-product.html">Single product</a> */}
+                            {/* <Link to='./singleProduct'>Single product</Link>     */}
+                                <a href="single-product.html">Single product</a>
                             </li>
                             <li>
-                            <Link to='./cart'>Cart</Link>    
-                                {/* <a href="cart.html">Cart</a> */}
+                            {/* <Link to='./cart'>Cart</Link>     */}
+                                <a href="cart.html">Cart</a>
                             </li>
                             <li>
-                            <Link to='./checkout'>Checkout</Link>    
-                                {/* <a href="checkout.html">Checkout</a> */}
+                            {/* <Link to='./checkout'>Checkout</Link>     */}
+                                <a href="checkout.html">Checkout</a>
                             </li>
                         </ul>
                     </div>
-                    {/* <Route path="/" exact component={Home} />
-                    <Route path="./shopPage" component={About} />
-                    <Route path="/contact" component={Contact} /> */}
                     <div className="shopping-item">
                         <a href="cart.html">Cart - <span className="cart-amunt">0</span> <i className="fas fa-shopping-cart"></i> <span className="product-count">0</span></a>
                     </div>
