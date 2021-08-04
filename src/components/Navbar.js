@@ -3,7 +3,7 @@ import { Link, Router } from 'react-router-dom'
 import './Navbar.css'
 export const Navbar = () => {
     return (
-            <nav className='mainmenu-area'>
+        <nav className='mainmenu-area'>
             <div className='container'>
                 <div className='row'>
                     <div className="navbar-header">
@@ -16,26 +16,26 @@ export const Navbar = () => {
                     </div>
                     <div className="navbar-collapse collapse">
                         <ul className="nav navbar-nav">
-                            <li className="active"> 
-                            {/* <Link to='/'>Home</Link> */}
-                            <a href="index.html">Home</a>
+                            <li className="active">
+                                <a href="index.html">Home</a>
                             </li>
                             <li>
-                            {/* <Link to='./shopPage'>Shop page</Link> */}
                                 <a href="shop.html">Shop page</a>
                             </li>
                             <li>
-                            {/* <Link to='./singleProduct'>Single product</Link>     */}
                                 <a href="single-product.html">Single product</a>
                             </li>
                             <li>
-                            {/* <Link to='./cart'>Cart</Link>     */}
                                 <a href="cart.html">Cart</a>
                             </li>
                             <li>
-                            {/* <Link to='./checkout'>Checkout</Link>     */}
                                 <a href="checkout.html">Checkout</a>
                             </li>
+                            {/* <Link to='./cart'>Cart</Link> */}
+                            {/* <Link to='./checkout'>Checkout</Link> */}
+                            {/* <Link to='./singleProduct'>Single product</Link>  */}
+                            {/* <Link to='./shopPage'>Shop page</Link> */}
+                            {/* <Link to='/'>Home</Link> */}
                         </ul>
                     </div>
                     <div className="shopping-item">
@@ -43,6 +43,6 @@ export const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </nav>         
+        </nav>
     )
 }
