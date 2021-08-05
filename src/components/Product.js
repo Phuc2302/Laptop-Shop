@@ -22,7 +22,7 @@ function Product(props) {
 
                     <div className="home-product-item__price">
                         <div className="home-product-item__price-current">
-                            <span className="home-product-item__price-current-bgr">$ {price}</span>
+                            <span className="home-product-item__price-current-bgr">{price} đ</span>
                         </div>
                     </div>
                     <div className="home-product-item__category">

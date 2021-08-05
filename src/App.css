@@ -174,7 +174,7 @@ html {
   line-height: 1.8rem;
   text-align: left;
   height: 3.6rem;
-  margin: 10px 0 6px;
+  margin: 0 0 6px;
   overflow: hidden;
   display: block;
   display: -webkit-box;
@@ -287,7 +287,7 @@ html {
 }
 
 .detail-product-item__info {
-  padding: 20px 40px 20px 20px;
+  padding: 0 20px 20px;
   width: 50%;
   float: right;
   text-align: left;
@@ -297,6 +297,7 @@ html {
 .detail-product-item__info h1 {
   color: var(--text-color);
   line-height: 30px;
+  /* margin-top: 0; */
 }
 
 .detail-product-item__price {
@@ -316,7 +317,7 @@ html {
 .detail-product-item__price-label {
   margin-left: 24px;
   position: relative;
-  padding-left: 20px;
+  padding-left: 26px;
   padding-right: 20px;
   border-radius: 0 3px 3px 0;
   -webkit-transition: none;

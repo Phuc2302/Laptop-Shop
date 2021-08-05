@@ -5,6 +5,7 @@ import { FaCartPlus } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getProductDetails } from '../actions';
+import api from '../services/api';
 
 function ProductDetail({ }) {
     const product = useSelector(state => state.product);
@@ -13,8 +14,8 @@ function ProductDetail({ }) {
     const dispatch = useDispatch();
 
     const fetchProdcutDetail = async () => {
-        const response = await axios
-            .get(`https://fakestoreapi.com/products/${productId}`)
+        const response = await api
+            .get(`products/${productId}`)
             .catch((err) => {
                 console.log('Err', err);
             });
@@ -45,7 +46,7 @@ function ProductDetail({ }) {
                                 <h1>{title}</h1>
                                 <h2>
                                     <span className="detail-product-item__price detail-product-item__price-label">
-                                        $ {price}
+                                        {price} đ
                                     </span>
                                 </h2>
                                 <p>{description}</p>
