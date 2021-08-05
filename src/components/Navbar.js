@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Router } from 'react-router-dom'
 import './Navbar.css'
+import { FaShoppingCart } from "react-icons/fa";
 export const Navbar = () => {
     return (
         <nav className='mainmenu-area'>
@@ -36,7 +37,7 @@ export const Navbar = () => {
                         </ul>
                     </div>
                     <div className="shopping-item">
-                        <a href="cart.html">Cart - <span className="cart-amunt">0</span> <i className="fas fa-shopping-cart"></i> <span className="product-count">0</span></a>
+                        <a href="cart.html">Cart - <span className="cart-amunt">0</span> <i><FaShoppingCart /></i> <span className="product-count">0</span></a>
                     </div>
                 </div>
             </div>
