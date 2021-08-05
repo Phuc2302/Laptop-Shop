@@ -5,14 +5,15 @@ import Product from './Product';
 import { getProducts } from '../actions/index'
 import { useEffect } from 'react';
 import Category from './Category';
+import api from '../services/api';
 
 function ProductList() {
     const products = useSelector(state => state.allProducts.products);
     const dispatch = useDispatch();
 
     const fetchProducts = async () => {
-        const response = await axios
-            .get("https://fakestoreapi.com/products")
+        const response = await api
+            .get("products")
             .catch((err) => {
                 console.log('Err', err);
             });
