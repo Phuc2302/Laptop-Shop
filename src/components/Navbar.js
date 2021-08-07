@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Router } from 'react-router-dom'
 import './Navbar.css'
 import { FaShoppingCart } from "react-icons/fa";
- const Navbar = () => {
+const Navbar = () => {
     return (
         <nav className='mainmenu-area'>
             <div className='container'>

@@ -1,4 +1,4 @@
-import { ADD_TO_CART, GET_PRODUCTS, GET_PRODUCT_DETAILS, REMOVE_FROM_CART, UPDATE_CART, SEARCH_PRODUCTS } from "./action-types"
+import { ADD_TO_CART, GET_PRODUCTS, GET_PRODUCT_DETAILS, REMOVE_FROM_CART, UPDATE_CART, SEARCH_PRODUCTS, GET_CATEGORYS } from "./action-types"
 
 // CART
 
@@ -46,3 +46,12 @@ export function getProductDetails(productId) {
 //         payload: product,
 //     }
 // }
+
+// CATEGORY
+
+export function getCategorys(categorys) {
+    return {
+        type: GET_CATEGORYS,
+        payload: categorys
+    }
+}

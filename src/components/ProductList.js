@@ -8,7 +8,7 @@ import Category from './Category';
 import api from '../services/api';
 import Search from './Search';
 
-function ProductList() {
+function ProductList(props) {
     const products = useSelector(state => state.allProducts.products);
     const dispatch = useDispatch();
     const [productsSearch, setProductsSearch] = useState(); //1
@@ -44,27 +44,14 @@ function ProductList() {
     return (
         <div>
             <Search onSearch={onSearch} />
-            <div className="app__container">
-                <div className="gird wide" style={{
-                    maxWidth: '1200px',
-                    margin: '0 auto'
-                }}>
-                    <h3>Product list</h3>
-                    <div className="row sm-gutter app__content">
-                        <Category />
-
-                        <div className="col l-10 m-12 c-12" style={{ marginTop: '-10px' }} >
-                            <div className="home-product">
-                                <div className="row sm-gutter">
-                                    <Product products={productsSearch} />
-                                </div>
-                            </div>
-                        </div>
+            <div className="col l-10 m-12 c-12" style={{ marginTop: '-10px' }} >
+                <div className="home-product">
+                    <div className="row sm-gutter">
+                        <Product products={productsSearch} categoryId={props.categoryId} />
                     </div>
                 </div>
-            </div>
+           </div>
         </div>
-
     );
 }
 

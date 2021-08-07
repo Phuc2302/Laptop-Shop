@@ -6,6 +6,7 @@ import ProductList from './components/ProductList';
 import { store } from './store';
 import Navbar from './components/Navbar';
 import Search from './components/Search';
+import Home from './components/Home';
 function App() {
   
   return (
@@ -16,7 +17,7 @@ function App() {
           <Navbar/>
           {/* <Search onSearch={onSearch}/> */}
           <Switch>
-            <Route path="/" exact component={ProductList} />
+            <Route path="/" exact component={Home} />
             <Route path="/product/:productId" exact component={ProductDetail} />
           </Switch>
         </BrowserRouter>
