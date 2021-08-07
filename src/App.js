@@ -1,8 +1,8 @@
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Router, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home';
 import ProductDetail from './components/ProductDetail';
-import ProductList from './components/ProductList';
 import { store } from './store';
 
 function App() {
@@ -10,9 +10,9 @@ function App() {
     <Provider store={store}>
       <div className="app">
         <BrowserRouter>
-          <h1>Lap-top shop</h1>
+          <h1>Laptop shop</h1>
           <Switch>
-            <Route path="/" exact component={ProductList} />
+            <Route path="/" exact component={Home} />
             <Route path="/product/:productId" exact component={ProductDetail} />
           </Switch>
         </BrowserRouter>

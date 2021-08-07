@@ -1,6 +1,4 @@
-import axios from 'axios';
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { FaCartPlus } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -9,7 +7,7 @@ import api from '../services/api';
 
 function ProductDetail({ }) {
     const product = useSelector(state => state.product);
-    const { image, title, price, category, description } = product;
+    const { image, title, price, description } = product;
     const { productId } = useParams();
     const dispatch = useDispatch();
 
@@ -22,7 +20,7 @@ function ProductDetail({ }) {
 
         dispatch(getProductDetails(response.data))
     }
-    console.log('product', product);
+    // console.log('product', product);
 
     useEffect(() => {
         if (productId && productId !== "") {
