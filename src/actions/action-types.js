@@ -9,3 +9,9 @@ export const GET_PRODUCT_DETAILS = 'GET_PRODUCT_DETAILS';
 
 // Search
 // export const SEARCH_PRODUCTS='SEARCH_PRODUCTS';
+
+
+// Category
+export const GET_CATEGORYS = 'GET_CATEGORYS';
+
+export const SET_ACTIVE_CATEGORY = "SET_ACTIVE_CATEGORY";
