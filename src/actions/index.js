@@ -1,4 +1,4 @@
-import { ADD_TO_CART, GET_PRODUCTS, GET_PRODUCT_DETAILS, REMOVE_FROM_CART, UPDATE_CART } from "./action-types"
+import { ADD_TO_CART, GET_PRODUCTS, GET_PRODUCT_DETAILS, REMOVE_FROM_CART, UPDATE_CART, SEARCH_PRODUCTS } from "./action-types"
 
 // CART
 
@@ -38,3 +38,11 @@ export function getProductDetails(productId) {
         payload: productId,
     };
 }
+
+//Search
+// export function searchProduct(product){
+//     return{
+//         type: SEARCH_PRODUCTS,
+//         payload: product,
+//     }
+// }
