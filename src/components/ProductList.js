@@ -25,17 +25,20 @@ function ProductList(props) {
     useEffect(() => {
         fetchProducts();
     }, []);
+
     // console.log('Products', products);
     // đây là cái anh chỉ
     function onSearch(value) {
         console.log(value);
+
         const foundProductsTemp = [];
+
         products.map(product => {
             if (product.title.includes(value)) {
                 foundProductsTemp.push(product);
             }
-        }
-        )
+        })
+
         console.log('foundProductsTemp', foundProductsTemp);
         setProductsSearch(foundProductsTemp);
         console.log('products', products);
@@ -44,13 +47,14 @@ function ProductList(props) {
     return (
         <div>
             <Search onSearch={onSearch} />
+
             <div className="col l-10 m-12 c-12" style={{ marginTop: '-10px' }} >
                 <div className="home-product">
                     <div className="row sm-gutter">
                         <Product products={productsSearch} categoryId={props.categoryId} />
                     </div>
                 </div>
-           </div>
+            </div>
         </div>
     );
 }

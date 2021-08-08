@@ -1,15 +1,17 @@
-// import { func } from 'prop-types';
 import React, { useState } from 'react';
-// import SearchList from './SearchList';
 import { FaSearch } from 'react-icons/fa';
+
+
 function Search(props) {
 
   const [search, setSearch] = useState('');
   const [searchShow, setSearchShow] = useState(false);
+
   function handleChange(e) {
     console.log(e.target.value)
     setSearch(e.target.value);
     props.onSearch(e.target.value)
+
     if (e.target.value === "") {
       setSearchShow(false);
     }
@@ -17,10 +19,12 @@ function Search(props) {
       setSearchShow(true);
     }
   }
+
   // function handleSubmit(e){
   //   console.log('handleSubmit');
   //   e.preventDefault()
   // }
+
   return (
     <section>
       <div className='input-group-search'>

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { FaList } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCategorys } from '../actions';
 import api from '../services/api';

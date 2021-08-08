@@ -15,10 +15,11 @@ function Home() {
 
     return (
         <div className="app__container">
-            <div className="gird wide" style={{
-                maxWidth: '1200px',
-                margin: '0 auto'
-            }}>
+            <div className="gird wide"
+                style={{
+                    maxWidth: '1200px',
+                    margin: '0 auto'
+                }}>
                 <div className="row sm-gutter app__content" >
                     <div className="col l-2 m-0 c-0">
                         <nav class="category">
