@@ -1,4 +1,4 @@
-import { ADD_TO_CART, GET_PRODUCTS, GET_PRODUCT_DETAILS, REMOVE_FROM_CART, UPDATE_CART, SEARCH_PRODUCTS, GET_CATEGORYS } from "./action-types"
+import { ADD_TO_CART, GET_CATEGORYS, GET_PRODUCTS, GET_PRODUCT_DETAILS, REMOVE_FROM_CART, UPDATE_CART } from "./action-types";
 
 // CART
 
@@ -23,6 +23,7 @@ export function updateCart(payload) {
     };
 }
 
+
 // PRODUCT
 
 export function getProducts(products) {
@@ -39,13 +40,6 @@ export function getProductDetails(productId) {
     };
 }
 
-//Search
-// export function searchProduct(product){
-//     return{
-//         type: SEARCH_PRODUCTS,
-//         payload: product,
-//     }
-// }
 
 // CATEGORY
 

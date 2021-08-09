@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCategorys } from '../actions';
+import { getCategorys } from '../actions/index';
 import api from '../services/api';
 
 function Category(props) {
@@ -14,8 +14,7 @@ function Category(props) {
                 className={id === props.status ? "category-item--active" : "category-item"}
                 onClick={() => props.handCategoryClick(id)}>
 
-                <a href="#" className="category-item__link"
-                >
+                <a href="#" className="category-item__link">
                     {name}
                 </a>
             </li>
@@ -37,6 +36,8 @@ function Category(props) {
     useEffect(() => {
         fetchCategorys();
     }, []);
+
+    // console.log("Category", categorys);
 
     return <>{renderCategory}</>
 }
