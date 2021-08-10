@@ -1,4 +1,4 @@
-import { ADD_TO_CART, GET_CATEGORYS, GET_PRODUCTS, GET_PRODUCT_DETAILS, REMOVE_FROM_CART, UPDATE_CART } from "./action-types";
+import { ADD_TO_CART, DECREASE_QUANTITY, GET_CATEGORYS, GET_PRODUCTS, GET_PRODUCT_DETAILS, INCREASE_QUANTITY, REMOVE_FROM_CART } from "./action-types";
 
 // CART
 
@@ -9,20 +9,26 @@ export function addToCart(product) {
     };
 }
 
-export function removeFromCart(productId) {
+export function increaseQuantity(payload) {
     return {
-        type: REMOVE_FROM_CART,
-        payload: productId,
-    };
+        type: INCREASE_QUANTITY,
+        payload
+    }
 }
 
-export function updateCart(payload) {
+export function decreaseQuantity(payload) {
     return {
-        type: UPDATE_CART,
+        type: DECREASE_QUANTITY,
+        payload
+    }
+}
+
+export function removeFromCart(payload) {
+    return {
+        type: REMOVE_FROM_CART,
         payload
     };
 }
-
 
 // PRODUCT
 

@@ -7,7 +7,15 @@
 .footer__bottom {
     padding: 16px 0;
     background-color: #f5f5f5;
-    margin-top: 61px;
+    /* justify-content: end; */
+    /* align-self: flex-end; */
+    /* margin-top: 112px; */
+    /* width: 100%; */
+    /* position: absolute; */
+    /* left: 0; */
+    /* bottom: 10px;
+    align-items: flex-end;
+    position: absolute; */
 }
 
 .footer__text {

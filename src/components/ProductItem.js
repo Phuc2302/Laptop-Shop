@@ -25,7 +25,7 @@ function ProductItem({ product }) {
 
                 <div className="home-product-item__price">
                     <div className="home-product-item__price-current">
-                        <span className="home-product-item__price-current-bgr">{product.price} đ</span>
+                        <span className="home-product-item__price-current-bgr">$ {product.price}</span>
                     </div>
                 </div>
                 <div className="home-product-item__category">

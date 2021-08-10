@@ -170,8 +170,9 @@ li {
     color: #5a88ca;
     font-weight: 700;
 }
+
 .product-count {
-    background: none repeat scroll 0 0 #5a88ca;
+    background: none repeat scroll 0 0 red;
     border-radius: 50%;
     color: #fff;
     display: inline-block;
@@ -200,9 +201,9 @@ li {
     color: #fff;
     text-decoration: none;
 }
-.shopping-item:hover .cart-amunt {
+.shopping-item:hover .cart-amount {
     color: #fff;
 }
-.shopping-item:hover .product-count {
+/* .shopping-item:hover .product-count {
     background: none repeat scroll 0 0 #000;
-}
+} */

@@ -48,6 +48,7 @@ html {
 
 .app__content {
   padding: 36px 0;
+  justify-content: center;
 }
 
 /* Category */
