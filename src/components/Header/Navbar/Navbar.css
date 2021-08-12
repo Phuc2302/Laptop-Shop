@@ -146,9 +146,13 @@ li {
     }
 } */
 
-.mainmenu-area ul.navbar-nav li:hover a,
+.mainmenu-area ul.navbar-nav li:hover a{
+    background-color: #5a88ca;
+    color: #fff
+}
+/* .mainmenu-area ul.navbar-nav li:hover a, */
 .mainmenu-area ul.navbar-nav li.active a {
-    background: #5a88ca;
+    background: gray;
     color: #fff;
 }
 
@@ -197,7 +201,8 @@ li {
 }
 
 .shopping-item:hover {
-    background: none repeat scroll 0 0 #5a88ca;
+    /* background: none repeat scroll 0 0 #5a88ca; */
+    background-color: none repeat scroll 0 0 #5a88ca;
     border-color: #5a88ca;
 }
 .shopping-item:hover a {
