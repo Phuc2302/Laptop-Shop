@@ -15,14 +15,11 @@ const Navbar = () => {
                     <div className='row-nav'>
                         <div className="navbar-list">
                             <ul className="nav navbar-nav">
+                                <li>
+                                    <Link to='/login'>Login</Link>
+                                </li>
                                 <li className="active">
                                     <Link to='/'>Home</Link>
-                                </li>
-                                <li>
-                                    <a href="shop.html">Shop page</a>
-                                </li>
-                                <li>
-                                    <a href="checkout.html">Checkout</a>
                                 </li>
                             </ul>
                         </div>

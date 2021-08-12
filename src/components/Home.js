@@ -3,6 +3,7 @@ import { FaList } from 'react-icons/fa';
 import Category from './Category';
 import Header from './Header/Header';
 import ProductList from './ProductList';
+import Footer from "./Footer/Footer"
 
 function Home() {
     const [categoryId, setCategoryId] = useState(0);
@@ -51,6 +52,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
