@@ -328,7 +328,7 @@ html {
 .detail-product-item__price-label::before {
   position: absolute;
   -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
-  /* transform: translateY(-50%) translateX(50%) rotate(-45deg); */
+  transform: translateY(-50%) translateX(50%) rotate(-45deg);
   top: 50%;
   right: 100%;
   content: "";

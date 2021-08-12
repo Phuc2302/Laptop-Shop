@@ -1,8 +1,9 @@
-import { GET_CATEGORYS, GET_PRODUCTS, GET_PRODUCT_DETAILS } from "../actions/action-types";
+import { GET_CATEGORYS, GET_PRICE, GET_PRODUCTS, GET_PRODUCT_DETAILS } from "../actions/action-types";
 
 const initialState = {
     products: [],
     categorys: [],
+    prices: [],
 }
 
 export function productsReducer(state = initialState, action) {
@@ -42,6 +43,20 @@ export function categorysReducer(state = initialState, action) {
                 ...state,
                 categorys: action.payload
             }
+
+        default:
+            return state;
+    }
+}
+
+// Price
+export function pricesReducer(state = initialState, action) {
+    switch (action.type) {
+        case GET_PRICE:
+            return {
+                ...state,
+                prices: action.payload
+            };
 
         default:
             return state;

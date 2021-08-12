@@ -23,7 +23,7 @@ function Header(props) {
     }
 
     return (
-        <div>
+        <div className="header">
             <Navbar />
             <Search onSearch={onSearch} />
         </div>
