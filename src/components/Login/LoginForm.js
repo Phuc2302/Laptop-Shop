@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
-import ProductDetail from '../ProductDetail';
-import Navbar from "../Header/Navbar/Navbar"
-import Home from '../Home';
 import axios from "axios";
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import Navbar from "../Header/Navbar/Navbar";
 import "./Login.css";
 
 
