@@ -14,16 +14,25 @@ const Navbar = () => {
                 <div className='container'>
                     <div className='row-nav'>
                         <div className="navbar-list">
+
                             <ul className="nav navbar-nav">
+
+                          
+                            <ul className="nav navbar-nav hide-on-mobile">
+
                                 <li className="active">
                                     <Link to='/'>Home</Link>
                                 </li>
-                                {/* <li>
-                                    <a href="shop.html">Shop page</a>
+                              
+
+                                </li> */}
+                                <li>
+                                    <a href="shoppage.html">Shop Page</a>
                                 </li>
                                 <li>
                                     <a href="checkout.html">Checkout</a>
-                                </li> */}
+                                </li>
+
                             </ul>
                         </div>
                         <div className="shopping-item">

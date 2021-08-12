@@ -40,16 +40,21 @@ import ProductDetail from './components/ProductDetail';
 import { store } from './store';
 import Footer from './components/Footer/Footer'; 
 
+
+
 function App() {
   return (
     <Provider store={store}>
       <div className="app">
         <BrowserRouter>
+
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/product/:productId" exact component={ProductDetail} />
             <Route path="/cart" component={Cart} />
           </Switch>
+
+          {/* <Footer /> */}
         </BrowserRouter>
         <Footer/>
       </div>

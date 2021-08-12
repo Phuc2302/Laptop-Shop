@@ -51,6 +51,21 @@ import api from '../services/api';
 
 function Category(props) {
     const categorys = useSelector(state => state.allCategorys.categorys);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        fetchCategorys();
+    }, []);
+
+    const fetchCategorys = async () => {
+        const response = await api
+            .get("categorys")
+            .catch((err) => {
+                console.log("Err", err);
+            });
+
+        dispatch(getCategorys(response.data));
+    }
 
     const renderCategory = categorys.map((category) => {
         const { id, name } = category;
@@ -67,21 +82,7 @@ function Category(props) {
         );
     })
 
-    const dispatch = useDispatch();
-
-    const fetchCategorys = async () => {
-        const response = await api
-            .get("categorys")
-            .catch((err) => {
-                console.log("Err", err);
-            });
-
-        dispatch(getCategorys(response.data));
-    }
-
-    useEffect(() => {
-        fetchCategorys();
-    }, []);
+    // console.log("Category", categorys);
 
     // console.log("Category", categorys);
 
