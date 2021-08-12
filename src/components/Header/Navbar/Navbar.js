@@ -18,14 +18,11 @@ const Navbar = () => {
                                 <li className="active">
                                     <Link to='/'>Home</Link>
                                 </li>
-                                {/* <li>
-                                    <a href="shop.html">Shop page</a>
-                                </li> */}
                                 <li>
                                     <a href="shoppage.html">Shop Page</a>
                                 </li>
                                 <li>
-                                    <a href="checkout.html">Checkout</a>
+                                    <a href="checkout.html">Shop Page</a>
                                 </li>
                             </ul>
                         </div>
