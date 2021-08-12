@@ -1,17 +1,92 @@
-import axios from 'axios';
-import React, { useState } from 'react';
+// import React, { useEffect, useState } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { getProducts } from '../actions/index';
+// import api from '../services/api';
+
+// import ProductItem from './ProductItem';
+
+// function ProductList(props) {
+//     const [categorySelected, setCategorySelected] = useState();
+//     const products = useSelector(state => state.allProducts.products);
+//     const dispatch = useDispatch();
+
+//     useEffect(() => {
+//         fetchProducts();
+//     }, []);
+
+//     useEffect(() => {
+//         console.log("id", props.categoryId);
+//         setCategorySelected(props.categoryId);
+//     }, [props.categoryId])
+
+//     const fetchProducts = async () => {
+//         const response = await api
+//             .get("products")
+//             .catch((err) => {
+//                 console.log('Err', err);
+//             });
+
+//         dispatch(getProducts(response.data));
+//     };
+
+//     const productsTemp = props.isSearch ? props.productSearch : products;
+
+//     const renderList = productsTemp.map((product) => {
+//         const { categoryId } = product;
+
+//         if (categoryId === categorySelected) {
+//             return (
+//                 <ProductItem product={product} />
+//             );
+//         }
+
+//         else if (categorySelected === 0) {
+//             return (
+//                 <ProductItem product={product} />
+//             );
+//         }
+//     })
+
+//     return (
+//         <div className="col l-10 m-12 c-12" style={{ marginTop: '-10px' }} >
+//             <div className="home-product">
+//                 {/* <SlideArrow/> */}
+//                 <div className="row sm-gutter">
+//                     {renderList}
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default ProductList;
+
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Product from './Product';
-import { getProducts } from '../actions/index'
-import { useEffect } from 'react';
-import Category from './Category';
+import { getProducts } from '../actions/index';
 import api from '../services/api';
-import Search from './Search';
+import ProductItem from './ProductItem';
 
 function ProductList(props) {
+    const [categorySelected, setCategorySelected] = useState();
+    const [priceSelected, setPriceSelected] = useState();
     const products = useSelector(state => state.allProducts.products);
     const dispatch = useDispatch();
-    const [productsSearch, setProductsSearch] = useState(); //1
+
+    console.log("Price", props.priceId);
+    console.log("Category", props.categoryId);
+
+    useEffect(() => {
+        fetchProducts();
+    }, []);
+
+
+    useEffect(() => {
+        setCategorySelected(props.categoryId);
+        setPriceSelected(props.priceId);
+    }, [props.categoryId, props.priceId])
+
+
     const fetchProducts = async () => {
         const response = await api
             .get("products")
@@ -22,35 +97,42 @@ function ProductList(props) {
         dispatch(getProducts(response.data));
     };
 
-    useEffect(() => {
-        fetchProducts();
-    }, []);
-    // console.log('Products', products);
-    // đây là cái anh chỉ
-    function onSearch(value) {
-        console.log(value);
-        const foundProductsTemp = [];
-        products.map(product => {
-            if (product.title.includes(value)) {
-                foundProductsTemp.push(product);
-            }
+    const productsTemp = props.isSearch ? props.productSearch : products;
+    const renderList = productsTemp.map((product) => {
+        const { categoryId, priceId } = product;
+
+        if ((categoryId === categorySelected) || (priceId === priceSelected)) {
+            return (
+                <ProductItem product={product} />
+            );
         }
-        )
-        console.log('foundProductsTemp', foundProductsTemp);
-        setProductsSearch(foundProductsTemp);
-        console.log('products', products);
-    }
-    //
+
+        else if ((categorySelected || priceSelected) === 0) {
+            return (
+                <ProductItem product={product} />
+            );
+        }
+
+        // if (priceId === priceSelected) {
+        //     return (
+        //         <ProductItem product={product} />
+        //     );
+        // }
+
+        // else if (priceSelected === 0) {
+        //     return (
+        //         <ProductItem product={product} />
+        //     );
+        // }
+    })
+
     return (
-        <div>
-            <Search onSearch={onSearch} />
-            <div className="col l-10 m-12 c-12" style={{ marginTop: '-10px' }} >
-                <div className="home-product">
-                    <div className="row sm-gutter">
-                        <Product products={productsSearch} categoryId={props.categoryId} />
-                    </div>
+        <div className="col l-10 m-12 c-12" style={{ marginTop: '-10px' }} >
+            <div className="home-product">
+                <div className="row sm-gutter">
+                    {renderList}
                 </div>
-           </div>
+            </div>
         </div>
     );
 }
