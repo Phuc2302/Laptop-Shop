@@ -1,4 +1,4 @@
-import { ADD_TO_CART, DECREASE_QUANTITY, GET_CATEGORYS, GET_PRODUCTS, GET_PRODUCT_DETAILS, INCREASE_QUANTITY, REMOVE_FROM_CART } from "./action-types";
+import { ADD_TO_CART, DECREASE_QUANTITY, GET_CATEGORYS, GET_PRICE, GET_PRODUCTS, GET_PRODUCT_DETAILS, INCREASE_QUANTITY, REMOVE_FROM_CART, UPDATE_CART } from "./action-types";
 
 // CART
 
@@ -10,6 +10,12 @@ export function addToCart(product) {
 }
 
 export function increaseQuantity(payload) {
+
+    return {
+        type: INCREASE_QUANTITY,
+        payload
+    }
+=======
     return {
         type: INCREASE_QUANTITY,
         payload
@@ -29,6 +35,30 @@ export function removeFromCart(payload) {
         payload
     };
 }
+
+export function decreaseQuantity(payload) {
+    return {
+        type: DECREASE_QUANTITY,
+        payload
+    }
+}
+
+export function removeFromCart(payload) {
+    return {
+        type: REMOVE_FROM_CART,
+        payload
+    };
+}
+
+
+// export function updateCart(payload) {
+//     return {
+//         type: UPDATE_CART,
+//         payload
+//     };
+// }
+
+
 
 // PRODUCT
 
@@ -53,5 +83,14 @@ export function getCategorys(categorys) {
     return {
         type: GET_CATEGORYS,
         payload: categorys
+    }
+}
+
+// PRICE
+
+export function getPrice(prices) {
+    return {
+        type: GET_PRICE,
+        payload: prices
     }
 }

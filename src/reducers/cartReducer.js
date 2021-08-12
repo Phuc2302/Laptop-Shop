@@ -76,7 +76,11 @@ export function cartReducer(state = initialState, action) {
                 ...state,
                 numberCart: state.numberCart - quantity_,
                 carts: state.carts.filter(item => {
+
                     return item.id != state.carts[action.payload].id
+
+                    return item.id !== state.carts[action.payload].id
+
                 })
             }
 

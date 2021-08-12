@@ -14,13 +14,30 @@ const Navbar = () => {
                 <div className='container'>
                     <div className='row-nav'>
                         <div className="navbar-list">
+
                             <ul className="nav navbar-nav">
+<<<<<<< HEAD
                                 <li>
                                     <Link to='/login'>Login</Link>
+=======
+
+                          
+                            <ul className="nav navbar-nav hide-on-mobile">
+
+                                <li className="active">
+                                    <Link to='/'>Home</Link>
+                                </li>
+                              
+
+                                </li> */}
+                                <li>
+                                    <a href="shoppage.html">Shop Page</a>
+>>>>>>> c87a212a157a2e2d9afdd8dea9028e71a8d5b3ba
                                 </li>
                                 <li className="active">
                                     <Link to='/'>Home</Link>
                                 </li>
+
                             </ul>
                         </div>
                         <div className="shopping-item">

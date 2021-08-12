@@ -13,5 +13,8 @@
 .login {
     font-size: x-large;
     justify-content: center;
-    text-decoration-color: aqua;
+}
+
+.form {
+    display: block;
 }

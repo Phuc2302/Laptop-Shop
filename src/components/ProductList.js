@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../actions/index';
@@ -6,17 +7,23 @@ import ProductItem from './ProductItem';
 
 function ProductList(props) {
     const [categorySelected, setCategorySelected] = useState();
+    const [priceSelected, setPriceSelected] = useState();
     const products = useSelector(state => state.allProducts.products);
     const dispatch = useDispatch();
+
+    console.log("Price", props.priceId);
+    console.log("Category", props.categoryId);
 
     useEffect(() => {
         fetchProducts();
     }, []);
 
+
     useEffect(() => {
-        console.log("id", props.categoryId);
         setCategorySelected(props.categoryId);
-    }, [props.categoryId])
+        setPriceSelected(props.priceId);
+    }, [props.categoryId, props.priceId])
+
 
     const fetchProducts = async () => {
         const response = await api
@@ -29,21 +36,43 @@ function ProductList(props) {
     };
 
     const productsTemp = props.isSearch ? props.productSearch : products;
-
     const renderList = productsTemp.map((product) => {
-        const { categoryId } = product;
+        const { categoryId, priceId } = product;
 
-        if (categoryId === categorySelected) {
+        if ((categoryId === categorySelected) || (priceId === priceSelected)) {
+            return (
+                <ProductItem product={product} />
+            );
+
+        }
+
+        else if ((categorySelected || priceSelected) === 0) {
             return (
                 <ProductItem product={product} />
             );
         }
 
-        else if (categorySelected === 0) {
+
+        }
+
+        else if ((categorySelected || priceSelected) === 0) {
             return (
                 <ProductItem product={product} />
             );
         }
+
+
+        // if (priceId === priceSelected) {
+        //     return (
+        //         <ProductItem product={product} />
+        //     );
+        // }
+
+        // else if (priceSelected === 0) {
+        //     return (
+        //         <ProductItem product={product} />
+        //     );
+        // }
     })
 
     return (
