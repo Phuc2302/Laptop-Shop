@@ -1,7 +1,11 @@
+
+
 import React, { useState } from 'react';
 import { FaList } from 'react-icons/fa';
 import Category from './Category';
 import Header from './Header/Header';
+
+import SlideArrow from './Header/Slider/Slider';
 import Price from './Price';
 import ProductList from './ProductList';
 
@@ -36,6 +40,9 @@ function Home() {
                     maxWidth: '1200px',
                     margin: '0 auto'
                 }}>
+
+                    <SlideArrow/>
+
                     <div className="row sm-gutter app__content" >
                         <div className="col l-2 m-0 c-0">
                             <nav className="category hide-on-mobile-table">

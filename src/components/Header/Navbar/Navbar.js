@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaSearch, FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../Navbar/Navbar.css';
@@ -14,15 +14,17 @@ const Navbar = () => {
                 <div className='container'>
                     <div className='row-nav'>
                         <div className="navbar-list">
-                            {/* <label htmlFor="mobile-search-checkbox" className="header__mobile-search">
-                                <FaSearch />
-                            </label> */}
+
+                            <ul className="nav navbar-nav">
+
+                          
                             <ul className="nav navbar-nav hide-on-mobile">
+
                                 <li className="active">
                                     <Link to='/'>Home</Link>
                                 </li>
-                                {/* <li>
-                                    <a href="shop.html">Shop page</a>
+                              
+
                                 </li> */}
                                 <li>
                                     <a href="shoppage.html">Shop Page</a>
@@ -30,6 +32,7 @@ const Navbar = () => {
                                 <li>
                                     <a href="checkout.html">Checkout</a>
                                 </li>
+
                             </ul>
                         </div>
                         <div className="shopping-item">

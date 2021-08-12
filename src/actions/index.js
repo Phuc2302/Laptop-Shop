@@ -10,6 +10,12 @@ export function addToCart(product) {
 }
 
 export function increaseQuantity(payload) {
+
+    return {
+        type: INCREASE_QUANTITY,
+        payload
+    }
+=======
     return {
         type: INCREASE_QUANTITY,
         payload
@@ -30,12 +36,28 @@ export function removeFromCart(payload) {
     };
 }
 
-export function updateCart(payload) {
+export function decreaseQuantity(payload) {
     return {
-        type: UPDATE_CART,
+        type: DECREASE_QUANTITY,
+        payload
+    }
+}
+
+export function removeFromCart(payload) {
+    return {
+        type: REMOVE_FROM_CART,
         payload
     };
 }
+
+
+// export function updateCart(payload) {
+//     return {
+//         type: UPDATE_CART,
+//         payload
+//     };
+// }
+
 
 
 // PRODUCT

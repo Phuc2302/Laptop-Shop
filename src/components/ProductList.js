@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../actions/index';
@@ -42,6 +43,7 @@ function ProductList(props) {
             return (
                 <ProductItem product={product} />
             );
+
         }
 
         else if ((categorySelected || priceSelected) === 0) {
@@ -49,6 +51,16 @@ function ProductList(props) {
                 <ProductItem product={product} />
             );
         }
+
+
+        }
+
+        else if ((categorySelected || priceSelected) === 0) {
+            return (
+                <ProductItem product={product} />
+            );
+        }
+
 
         // if (priceId === priceSelected) {
         //     return (

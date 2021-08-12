@@ -14,7 +14,11 @@ function Search(props) {
     }
 
     return (
+
+        <div className="header__search">
+
         <div className="header__search hide-on-mobile">
+
             <div className="header__search-input-wrap">
                 <input
                     type="text"
