@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './Search.css';
 
 function Search(props) {
@@ -15,11 +16,17 @@ function Search(props) {
 
     return (
         <div className="header__search">
+            <a href="" className="header__logo">
+                <Link to="/" >
+                    <img src="https://www.laptophouse.sg/wp-content/uploads/2019/12/laptophouse4.png" alt="" className="header__logo-link" />
+                </Link>
+            </a>
+
             <div className="header__search-input-wrap">
                 <input
                     type="text"
                     className="header__search-input"
-                    placeholder="Tìm kiếm sản phẩm"
+                    placeholder="Search product"
                     onChange={handleChange}
                 />
                 <button

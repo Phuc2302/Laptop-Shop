@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getPrice } from '../actions';
 import api from '../services/api';
 
-function Price(props) {
+function FilterPrice(props) {
     const prices = useSelector(state => state.prices.prices)
     const dispatch = useDispatch();
 
@@ -41,4 +41,4 @@ function Price(props) {
     return <>{renderPrice}</>
 }
 
-export default Price;
+export default FilterPrice;

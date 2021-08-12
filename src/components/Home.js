@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FaList } from 'react-icons/fa';
 import Category from './Category';
+import FilterPrice from './FilterPrice';
 import Header from './Header/Header';
 import SlideArrow from './Header/Slider/Slider';
-import Price from './Price';
 import ProductList from './ProductList';
 
 function Home() {
@@ -57,7 +57,7 @@ function Home() {
                                     Price
                                 </h3>
                                 <ul className="category-list">
-                                    <Price
+                                    <FilterPrice
                                         activePriceId={activePriceId}
                                         handlePriceClick={handlePriceClick}
                                     />

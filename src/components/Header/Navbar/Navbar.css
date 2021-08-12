@@ -4,10 +4,9 @@
 .mainmenu-area {
     background: none repeat scroll 0 0 #fbfbfb;
     /* background: none repeat scroll 0 0 #e49f9f; */
-
     font-family: "Roboto Condensed", sans-serif;
     text-transform: uppercase;
-    height: 80px;
+    height: 60px;
     z-index: 10;
 }
 
@@ -40,7 +39,7 @@
 }
 
 .navbar-list {
-    margin-top: 40px;
+    margin-top: 22px;
 }
 
 .navbar-item {
