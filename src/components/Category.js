@@ -36,10 +36,6 @@ function Category(props) {
         );
     })
 
-    // console.log("Category", categorys);
-
-    // console.log("Category", categorys);
-
     return <>{renderCategory}</>
 }
 

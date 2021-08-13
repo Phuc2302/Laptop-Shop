@@ -29,7 +29,6 @@ function ProductDetail({ }) {
 
         dispatch(getProductDetails(response.data))
     }
-    // console.log('product', product);
 
     function handleAddToCart(product) {
         dispatch(addToCart(product));

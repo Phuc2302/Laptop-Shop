@@ -8,7 +8,6 @@ function ProductItem({ product }) {
     const dispatch = useDispatch();
 
     function handleAddToCart(product) {
-        // console.log(product);
         dispatch(addToCart(product))
     }
     return (
