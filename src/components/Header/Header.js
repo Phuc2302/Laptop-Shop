@@ -11,21 +11,26 @@ function Header(props) {
         const foundProductsTemp = [];
 
         products.map(product => {
-            if (product.title.includes(value)) {
+            const titleTemp= product.title.toLowerCase();
+            if (titleTemp.includes(value)) {
                 foundProductsTemp.push(product);
             }
         })
 
         setProductsSearch(foundProductsTemp);
         // console.log(foundProductsTemp);
-
+        console.log(foundProductsTemp);
         props.onSearchBtn(foundProductsTemp);
     }
+
 
     return (
         <div className="header">
             <Navbar />
-            <Search onSearch={onSearch} />
+            <Search 
+            onSearch={onSearch} 
+            // filter={filter} 
+            />
         </div>
     );
 }

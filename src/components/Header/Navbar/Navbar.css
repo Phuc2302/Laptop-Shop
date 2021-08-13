@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 .mainmenu-area {
-    background: none repeat scroll 0 0 #fbfbfb;
+    background: none repeat scroll 0 0 #fff;
     /* background: none repeat scroll 0 0 #e49f9f; */
     font-family: "Roboto Condensed", sans-serif;
     text-transform: uppercase;
@@ -11,7 +11,7 @@
 }
 
 .mainmenu-area ul.navbar-nav li a {
-    color: #6e6a6a;
+    color: #fff;
     font-size: 16px;
     padding: 20px;
     text-decoration: none;
@@ -140,6 +140,20 @@ li {
 }
 
 .mainmenu-area ul.navbar-nav li:hover a,
+
+/* @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .mainmenu-area ul.navbar-nav li a {
+        font-size: 14px;
+        padding: 15px 10px;
+    }
+} */
+
+.mainmenu-area ul.navbar-nav li:hover a {
+    background-color: #5a88ca;
+    color: #fff;
+}
+/* .mainmenu-area ul.navbar-nav li:hover a, */
+
 .mainmenu-area ul.navbar-nav li.active a {
     background: #5a88ca;
     color: #fff;
@@ -190,7 +204,8 @@ li {
 }
 
 .shopping-item:hover {
-    background: none repeat scroll 0 0 #5a88ca;
+    /* background: none repeat scroll 0 0 #5a88ca; */
+    background-color: none repeat scroll 0 0 #5a88ca;
     border-color: #5a88ca;
 }
 .shopping-item:hover a {

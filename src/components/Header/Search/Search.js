@@ -5,13 +5,18 @@ import './Search.css';
 
 function Search(props) {
     const [searchText, setSearchText] = useState('');
-
+    // const { filter } = props;
     function handleChange(e) {
         setSearchText(e.target.value);
+       
+
     }
 
     function handleClickSearch() {
         props.onSearch(searchText);
+        // props.filter();
+        // console.log('filter:' ,props.filter);
+        
     }
 
     return (

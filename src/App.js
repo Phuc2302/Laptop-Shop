@@ -22,8 +22,12 @@ function App() {
             <Route path="/product/:productId" exact component={ProductDetail} />
             <Route path="/cart" component={Cart} />
             <Route path="/buy" component={Buy} />
+
             <Route path="/login" component={LoginForm} />
             <Route path="/logout" component={Logout} />
+
+            <Route path='/Login' exact component={LoginForm} />
+
           </Switch>
 
           <Footer />

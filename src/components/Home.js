@@ -4,6 +4,8 @@ import Category from './Category';
 import FilterPrice from './FilterPrice';
 import Header from './Header/Header';
 import SlideArrow from './Header/Slider/Slider';
+// import Price from './Price';
+
 import ProductList from './ProductList';
 
 function Home() {
@@ -29,6 +31,7 @@ function Home() {
         setIsSearch(true);
     }
 
+    // const lowercaseSearch=products.toLowerCase();
     return (
         <>
             <Header onSearchBtn={onSearchBtn} />
@@ -37,7 +40,7 @@ function Home() {
                     maxWidth: '1200px',
                     margin: '0 auto'
                 }}>
-                    <SlideArrow />
+                    <SlideArrow/>
                     <div className="row sm-gutter app__content" >
                         <div className="col l-2 m-0 c-0">
                             <nav className="category hide-on-mobile-table">
