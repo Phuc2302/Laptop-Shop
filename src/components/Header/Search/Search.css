@@ -11,6 +11,21 @@
     align-items: center;
     /* margin-bottom: 30px; */
 }
+
+.header__logo {
+    width: 0px;
+    color: transparent;
+    text-decoration: none;
+    display: block;
+    line-height: 0;
+    margin-left: 160px;
+    z-index: 8;
+}
+
+.header__logo-link {
+    width: 120px;
+}
+
 .header__search-input-wrap {
     height: 100%;
     flex: 1;

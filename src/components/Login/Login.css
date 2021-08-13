@@ -1,0 +1,20 @@
+.App {
+    background-color: #777;
+    height: 100vh;
+    justify-content: center;
+}
+
+.form-inner {
+    background-color: rgb(228, 218, 218);
+    height: 100vh;
+    justify-content: center;
+}
+
+.login {
+    font-size: x-large;
+    justify-content: center;
+}
+
+.form {
+    display: block;
+}

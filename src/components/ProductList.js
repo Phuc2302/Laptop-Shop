@@ -49,18 +49,6 @@ function ProductList(props) {
                 <ProductItem product={product} />
             );
         }
-
-        // if (priceId === priceSelected) {
-        //     return (
-        //         <ProductItem product={product} />
-        //     );
-        // }
-
-        // else if (priceSelected === 0) {
-        //     return (
-        //         <ProductItem product={product} />
-        //     );
-        // }
     })
 
     return (

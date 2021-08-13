@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../Header/Navbar/Navbar';
 import './Cart.css';
 import { decreaseQuantity, increaseQuantity, removeFromCart } from '../../actions';
+import { Link } from 'react-router-dom';
 
 function Cart() {
     const items = useSelector(state => state.cart)
@@ -84,6 +85,11 @@ function Cart() {
                                     </tr>
                                 </tbody>
                             </table>
+                            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                                <Link to="buy" style={{ textDecoration: "none" }}>
+                                    <button className="btn btn-next">Buy</button>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
