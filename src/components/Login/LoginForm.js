@@ -5,15 +5,10 @@ import Navbar from "../Header/Navbar/Navbar";
 import "./Login.css";
 
 
-function LoginForm(Login, error) {
+function LoginForm() {
     let history = useHistory();
-    const [details, setDetails] = useState({ name: "", email: "", password: "" });
+    const [details, setDetails] = useState({ email: "", password: "" });
 
-    /*const handleSubmit = e => {
-        e.preventDefault();
-
-        Login(details);
-    }*/
     const handlerOnLogin = () => {
         axios
             .post("http://localhost:8000/auth/login", {
@@ -26,32 +21,30 @@ function LoginForm(Login, error) {
                     history.push("/");
                 }
             })
-
             .catch((error) => {
                 console.log(error);
             });
     };
+
     return (
         <>
             <Navbar />
-            <form >
+            <form className="form-login" >
                 <div className="form-inner">
                     <h2>Login</h2>
                     <div className="login">
                         <label htmlFor="email">Email:</label>
                         <input type="email" name="email" id="email"
                             onChange={e => setDetails({ ...details, email: e.target.value })}
-                            value={details.email}
                         />
                     </div>
                     <div className="login">
                         <label htmlFor="password">Password:</label>
                         <input type="password" name="password" id="password"
                             onChange={e => setDetails({ ...details, password: e.target.value })}
-                            value={details.password}
                         />
                     </div>
-                    <input onClick={handlerOnLogin} type="button" value="LOGIN" />
+                    <input className="button" onClick={handlerOnLogin} type="button" value="LOGIN" />
                 </div>
             </form>
         </>

@@ -62,9 +62,7 @@
     .navbar-toggle {
         display: none;
     }
-<<<<<<< HEAD
-}
-=======
+
 } */
 /* .navbar-toggle {
     position: relative;
@@ -110,7 +108,6 @@
         overflow: visible !important;
     }
 } */
->>>>>>> c87a212a157a2e2d9afdd8dea9028e71a8d5b3ba
 
 /* @media (min-width: 768px) {
     .navbar-nav {
@@ -141,13 +138,6 @@ li {
     list-style-type: "";
     text-align: -webkit-match-parent;
 }
-
-/* @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .mainmenu-area ul.navbar-nav li a {
-        font-size: 14px;
-        padding: 15px 10px;
-    }
-} */
 
 .mainmenu-area ul.navbar-nav li:hover a,
 .mainmenu-area ul.navbar-nav li.active a {
