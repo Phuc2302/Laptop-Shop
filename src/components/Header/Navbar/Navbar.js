@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import '../Navbar/Navbar.css';
 import '../../Login/LoginForm';
+import '../Navbar/Navbar.css';
 
 const Navbar = () => {
     const { numberCart } = useSelector(state => state.cart)
@@ -25,14 +25,13 @@ const Navbar = () => {
                                 <li className="active">
                                     <Link to='/'>Home</Link>
                                 </li>
-
                                 {
                                     tokenLocalStorage ? (
                                         <li >
                                             <Link to="/logout">Logout</Link>
                                         </li>
                                     ) : (
-                                        <li className="active">
+                                        <li className="">
                                             <Link to="/login">Login</Link>
                                         </li>
                                     )
@@ -47,7 +46,6 @@ const Navbar = () => {
                                 </div>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </div>

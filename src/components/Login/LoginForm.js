@@ -31,20 +31,30 @@ function LoginForm() {
             <Navbar />
             <form className="form-login" >
                 <div className="form-inner">
-                    <h2>Login</h2>
+                    <h2 className="text-login">Login</h2>
                     <div className="login">
-                        <label htmlFor="email">Email:</label>
-                        <input type="email" name="email" id="email"
+                        <label htmlFor="email" style={{ marginRight: "46px" }} >Email:</label>
+                        <input type="email"
+                            name="email"
+                            id="email"
+                            className="form-input"
                             onChange={e => setDetails({ ...details, email: e.target.value })}
                         />
                     </div>
                     <div className="login">
                         <label htmlFor="password">Password:</label>
-                        <input type="password" name="password" id="password"
+                        <input type="password"
+                            name="password"
+                            id="password"
+                            className="form-input"
                             onChange={e => setDetails({ ...details, password: e.target.value })}
                         />
                     </div>
-                    <input className="button" onClick={handlerOnLogin} type="button" value="LOGIN" />
+                    <input className="button form-input"
+                        type="button" value="LOGIN"
+                        style={{ margin: "4px 4px 4px 276px" }}
+                        onClick={handlerOnLogin}
+                    />
                 </div>
             </form>
         </>

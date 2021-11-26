@@ -107,7 +107,7 @@ li {
 }
 
 .shopping-item:hover {
-    background-color: none repeat scroll 0 0 #5a88ca;
+    background: none repeat scroll 0 0 #5a88ca;
     border-color: #5a88ca;
 }
 .shopping-item:hover a {

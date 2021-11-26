@@ -7,8 +7,6 @@ function Search(props) {
     const [searchText, setSearchText] = useState('');
     function handleChange(e) {
         setSearchText(e.target.value);
-
-
     }
 
     function handleClickSearch() {
